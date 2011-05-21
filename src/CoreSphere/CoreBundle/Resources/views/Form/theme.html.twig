@@ -1,0 +1,48 @@
+{% extends 'TwigBundle:Form:div_layout.html.twig' %}
+
+{% block field_rows %}
+    <div class="form-errors">
+        {{ form_errors(form) }}
+    </div>
+    {% for child in form.children %}
+        {{ form_row(child) }}
+    {% endfor %}
+{% endblock field_rows %}
+
+{% block field_row %}
+    <div class="form-row{% if errors|length > 0 %} errors{% endif %}">
+        {{ form_label(form) }}
+        <div class="form-field">
+            {{ form_widget(form) }}
+            {% if errors|length > 0 %}
+            <div class="form-errors">
+                {{ form_errors(form) }}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block field_label %}
+    <label for="{{ id }}">
+       {{ ('attribute.'~id)|trans }}
+        {% if required %}
+            <span class="form-required" title="This field is required">*</span>
+        {% endif %}
+    </label>
+{% endblock %}
+
+
+{% block repeated_row %}
+    <div class="form-row{% if errors|length > 0 %} errors{% endif %}">
+    {% for field in form %}
+        {{ form_row(field) }}
+    {% endfor %}
+
+    {% if errors|length > 0 %}
+    <div class="form-errors">
+        {{ form_errors(form) }}
+    </div>
+    {% endif %}
+    </div>
+{% endblock %}

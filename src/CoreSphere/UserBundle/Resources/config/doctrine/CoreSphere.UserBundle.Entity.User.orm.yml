@@ -1,0 +1,23 @@
+CoreSphere\UserBundle\Entity\User:
+    type: entity
+    table: users
+    repositoryClass: CoreSphere\UserBundle\Repository\UserRepository
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        username:               { type: string, length: 255 }
+        email:                  { type: string, length: 255 }
+        password:               { type: string, length: 255 }
+        salt:                   { type: string, length: 255 }
+        createdAt:              { type: datetime }
+        updatedAt:              { type: datetime }
+        locked:                 { type: boolean }
+        enabled:                { type: boolean }
+        expires:                { type: boolean }
+        expiresAt:              { type: datetime, nullable: true }
+        confirmationToken:      { type: string, length: 255, nullable: true }
+
+        description:            { type: text }

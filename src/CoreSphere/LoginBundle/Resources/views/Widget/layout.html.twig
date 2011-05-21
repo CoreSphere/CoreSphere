@@ -1,0 +1,7 @@
+{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+	{% block loggedin %}
+	{% endblock %}
+{% else %}
+	{% block loggedout %}
+	{% endblock %}
+{% endif %}

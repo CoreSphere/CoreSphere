@@ -1,0 +1,73 @@
+<div class="block_exception">
+    <div class="block_exception_detected clear_fix">
+        <div class="text_exception">
+
+            <h1>
+                {{ exception.message|replace({"\n": '<br />'})|format_file_from_text }}
+            </h1>
+
+            <div>
+                <strong>{{ status_code }}</strong> {{ status_text }} - {{ exception.class|abbr_class }}
+            </div>
+
+            {% set previous_count = exception.allPrevious|length %}
+            {% if previous_count %}
+                <div class="linked"><span><strong>{{ previous_count }}</strong> linked Exception{{ previous_count > 1 ? 's' : '' }}:</span>
+                    <ul>
+                        {% for i, previous in exception.allPrevious %}
+                            <li>
+                                {{ previous.class|abbr_class }} <a href="#traces_link_{{ i + 1 }}" onclick="toggle('traces_{{ i + 1 }}', 'traces'); switchIcons('icon_traces_{{ i + 1 }}_open', 'icon_traces_{{ i + 1 }}_close');">&raquo;</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+
+
+        </div>
+    </div>
+</div>
+
+{% for position, e in exception.toarray %}
+    {% include 'CoreSphereCoreBundle:Exception:traces.html.twig' with { 'exception': e, 'position': position, 'count': previous_count } only %}
+{% endfor %}
+
+{% if logger %}
+    <div class="block">
+        <div class="logs clear_fix">
+            {% spaceless %}
+            <h2>
+                Logs
+            </h2>
+            {% endspaceless %}
+
+            {% if logger.counterrors %}
+                <div class="error_count">
+                    <span>
+                        {{ logger.counterrors }} error{{ logger.counterrors > 1 ? 's' : ''}}
+                    </span>
+                </div>
+            {% endif %}
+
+        </div>
+
+        <div id="logs">
+            {% include 'CoreSphereCoreBundle:Exception:logs.html.twig' with { 'logs': logger.logs } only %}
+        </div>
+
+    </div>
+{% endif %}
+
+{% if currentContent %}
+    <div class="block">
+        {% spaceless %}
+        <h2>
+            Content of the Output
+        </h2>
+        {% endspaceless %}
+
+        <div id="output_content">
+            {{ currentContent }}
+        </div>
+    </div>
+{% endif %}

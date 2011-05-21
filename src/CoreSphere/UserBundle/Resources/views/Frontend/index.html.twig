@@ -1,0 +1,31 @@
+{% extends 'CoreSphereUserBundle:Frontend:layout.html.twig' %}
+
+{% block content %}
+    <h2>{{ 'headline.index'|trans }}</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>{{ 'attribute.user_username'|trans }}</th>
+                <th>{{ 'attribute.user_createdAt'|trans }}</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user in user_list %}
+            {#% if is_granted('ROLE_SHOW_USER', user) %#}
+            <tr>
+                <td><a href="{{ path('show_user', {'id':user.id}) }}">{{ user.username }}</a></td>
+                <td>{{ user.createdAt|date('d-m-Y') }}</td>
+            </tr>
+            {#% endif %#}
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="options">
+        <ul>
+            {#% if is_granted('ROLE_CREATE_USER') %#}
+            <li><a href="{{ path('new_user') }}">{{ 'link.new'|trans }}</a></li>
+            {#% endif %#}
+        </ul>
+    </div>
+{% endblock %}

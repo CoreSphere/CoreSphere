@@ -1,0 +1,10 @@
+CoreSphere\UserBundle\Entity\User:
+    properties:
+        username:
+            - NotBlank: ~
+            - MinLength: 3
+        email:
+            - NotBlank: ~
+            - Email: ~
+        plainPassword:
+            - MinLength: 5

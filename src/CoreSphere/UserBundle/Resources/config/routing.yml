@@ -1,0 +1,38 @@
+list_users:
+    pattern:  /users/
+    defaults: { _controller: CoreSphereUserBundle:Frontend:index }
+    requirements:
+        _method: GET
+
+show_user:
+    pattern:  /users/{id}/
+    defaults: { _controller: CoreSphereUserBundle:Frontend:show }
+    requirements:
+        id: \d+
+        _method: GET
+
+new_user:
+    pattern:  /users/new/
+    defaults: { _controller: CoreSphereUserBundle:Frontend:new }
+    requirements:
+        _method: GET
+
+edit_user:
+    pattern:  /users/{id}/edit/
+    defaults: { _controller: CoreSphereUserBundle:Frontend:edit }
+    requirements:
+        id: \d+
+        _method: GET
+
+create_user:
+    pattern:  /users/
+    defaults: { _controller: CoreSphereUserBundle:Frontend:create }
+    requirements:
+        _method: POST
+
+update_user:
+    pattern:  /users/{id}
+    defaults: { _controller: CoreSphereUserBundle:Frontend:update }
+    requirements:
+        id: \d+
+        _method: POST

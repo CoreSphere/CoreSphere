@@ -1,0 +1,21 @@
+{% extends 'CoreSphereUserBundle:Frontend:layout.html.twig' %}
+
+{% block content %}
+    <h2>{{ 'headline.edit'|trans({'%username%': user.username}) }}</h2>
+
+    <form action="{{ path('update_user', {'id': user.id}) }}" method="post" {{ form_enctype(form) }}>
+        {% include "CoreSphereUserBundle:Frontend:form.html.twig" %}
+        <p>
+            <input type="submit" value="{{ 'button.update'|trans }}" />
+        </p>
+    </form>
+
+    <div class="options">
+        <ul>
+            {#% if is_granted('SHOW', user) %#}
+            <li><a href="{{ path('show_user', {'id':user.id}) }}">{{ 'link.cancel'|trans }}</a></li>
+            {#% endif %#}
+        </ul>
+    </div>
+{% endblock %}
+

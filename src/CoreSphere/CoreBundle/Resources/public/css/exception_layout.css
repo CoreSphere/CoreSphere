@@ -1,0 +1,173 @@
+html
+{
+    background: #eee
+}
+
+html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}
+
+html,
+body
+{
+    width:100%;
+    min-height:100%;
+    _height:100%;
+}
+body
+{
+    font: 1em "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;;
+    text-align:left;
+		color: #333;
+    background-color:#efefef;
+		padding: 2em 0;
+}
+
+.sf-exceptionreset, .sf-exceptionreset .block, .sf-exceptionreset #message
+{
+    margin: auto
+}
+
+img
+{
+    border: 0;
+}
+
+.clear
+{
+    clear:both;
+    height:0;
+    font-size:0;
+    line-height:0;
+}
+
+.clear_fix:after
+{
+    content:"\0020";
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+}
+
+.clear_fix
+{
+    display:inline-block;
+}
+
+* html .clear_fix
+{
+    height:1%;
+}
+
+.clear_fix
+{
+    display:block;
+}
+
+.header
+{
+    padding:30px 30px 20px 30px;
+}
+
+.header_logo
+{
+    float:left;
+}
+
+.search
+{
+    float:right;
+}
+
+.search
+{
+    padding-top:20px;
+}
+
+.search label
+{
+    line-height:28px;
+    vertical-align:middle;
+}
+
+.search input
+{
+    width:188px;
+    margin-right:10px;
+    font-size:12px;
+    border:1px solid #dadada;
+    background:#FFFFFF url(../images/input_bg.gif) repeat-x left top;
+    padding:5px 6px;
+    color:#565656;
+}
+
+.search input[type="search"]
+{
+    -webkit-appearance: textfield;
+}
+
+.search button
+{
+    -webkit-appearance: button-bevel;
+    float: none;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    width: auto;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    border: 0;
+    background: none;
+}
+
+.search button:-moz-focus-inner
+{
+  padding: 0;
+  border: none;
+}
+
+.search button:hover
+{
+    text-decoration: none;
+}
+
+.search button span span,
+.search button span span span
+{
+  position: static;
+}
+
+.search button span
+{
+    position: relative;
+    text-decoration: none;
+    display: block;
+    height: 28px;
+    float: left;
+    padding: 0 0 0 8px;
+    background: transparent url(../images/border_l.png) no-repeat top left;
+}
+
+.search button span span
+{
+    padding: 0 8px 0 0;
+    background: transparent url(../images/border_r.png) right top no-repeat;
+}
+
+.search button span span span
+{
+    padding: 0 7px;
+    font: bold 11px Arial, Helvetica, sans-serif;
+    color: #6b6b6b;
+    line-height: 28px;
+    background: transparent url(../images/btn_bg.png) repeat-x top left;
+}
+
+#content
+{
+    width: 970px;
+    margin: 0 auto;
+}

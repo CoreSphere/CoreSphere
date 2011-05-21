@@ -1,0 +1,49 @@
+security:
+    encoders:
+        Symfony\Component\Security\Core\User\User: plaintext
+        CoreSphere\UserBundle\Entity\User: sha512
+
+    role_hierarchy:
+        ROLE_ADMIN:       ROLE_USER
+        ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+
+    providers:
+        default_provider:
+            providers: [dao_provider, in_memory]
+        in_memory:
+            users:
+                user:  { password: userpass, roles: [ 'ROLE_USER' ] }
+                admin: { password: adminpass, roles: [ 'ROLE_ADMIN' ] }
+        dao_provider:
+                entity: { class: CoreSphere\UserBundle\Entity\User, property: username }
+
+    firewalls:
+        profiler:
+            pattern:  ^/_profiler
+            security: false
+
+        wdt:
+            pattern:  ^/_wdt
+            security: false
+
+        main:
+            pattern: ^/.*
+            anonymous: true
+            http_basic: true
+            switch_user: {role: ROLE_ADMINSA}
+            form_login:
+                check_path:                     /login_check
+                login_path:                     /login
+                failure_path:                   null
+                always_use_default_target_path: false
+                default_target_path:            /
+                target_path_parameter:          _target_path
+                use_referer:                    false
+            logout: true
+
+
+    access_control:
+        - { path: /login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+
+    acl:
+        connection: default

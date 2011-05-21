@@ -1,0 +1,9 @@
+{% extends 'CoreSphereCoreBundle::exception_layout.html.twig' %}
+
+{% block title %}
+    {{ exception.message }} ({{ status_code }} {{ status_text }})
+{% endblock %}
+
+{% block body %}
+    {% include 'CoreSphereCoreBundle:Exception:exception.html.twig' %}
+{% endblock %}

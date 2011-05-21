@@ -1,0 +1,11 @@
+CoreSphere\UserBundle\Entity\User:
+    properties:
+        username:
+            - Regex: "/^[0-9][a-z]+$/"
+            - NotBlank: ~
+            - MinLength: 3
+        email:
+            - NotBlank: ~
+            - Email: ~
+        plainPassword:
+            - MinLength: 5

@@ -1,0 +1,16 @@
+{% if trace.function %}
+    at
+    <strong>
+        <abbr title="{{ trace.class }}">{{ trace.short_class }}</abbr>
+        {{ trace.type ~ trace.function }}
+    </strong>
+    ({{ trace.args|format_args }})
+    <br />
+{% endif %}
+
+{% if trace.file is defined and trace.line is defined %}
+    in {{ trace.file|format_file(trace.line) }}
+    <div id="trace_{{ prefix ~ '_' ~ i }}" class="trace">
+        {{ trace.file|file_excerpt(trace.line) }}
+    </div>
+{% endif %}

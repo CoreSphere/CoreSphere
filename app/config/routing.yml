@@ -1,0 +1,12 @@
+user_list:
+    pattern: /
+    defaults: { _controller: CoreSphereUserBundle:Frontend:index }
+
+users:
+    resource: "@CoreSphereUserBundle/Resources/config/routing.yml"
+
+login:
+    resource: "@CoreSphereLoginBundle/Resources/config/routing.yml"
+
+console:
+    resource: "@CoreSphereConsoleBundle/Resources/config/routing.yml"

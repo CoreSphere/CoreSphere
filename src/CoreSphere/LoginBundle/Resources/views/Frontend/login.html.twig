@@ -1,0 +1,33 @@
+{% extends "CoreSphereLoginBundle:Frontend:layout.html.twig" %}
+
+{% block content %}
+
+<h1>{{ "Login"|trans }}</h1>
+
+<form action="{{ path('login_check') }}" method="post">
+
+	{% if error %}
+	    <div class="flash error">{{ error.message }}</div>
+	{% endif %}
+
+    <div class="form_row">
+    	<label for="username">{{ "Username"|trans }}:</label>
+	    <input type="text" id="username" name="_username" value="{{ last_username }}" />
+    </div>
+
+	<div class="form_row">
+    	<label for="password">{{ "Password"|trans }}:</label>
+	    <input type="password" id="password" name="_password" />
+	</div>
+
+	<div class="form_row">
+		<input type="checkbox" id="remember_me" name="_remember_me" value="1" />
+		<label for="remember_me">{{ "Remember me"|trans }}</label>
+	</div>
+
+	<div class="form_row">
+    	<input type="submit" value="{{ "Login"|trans }}" />
+	</div>
+</form>
+
+{% endblock %}

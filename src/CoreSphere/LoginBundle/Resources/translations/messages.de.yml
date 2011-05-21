@@ -1,0 +1,3 @@
+welcome: 'Willkommen %username%'
+login: 'Anmelden'
+logout: 'Abmelden'

@@ -1,0 +1,72 @@
+body {
+	font-family: sans-serif;
+	background: rgba(240,240,240,1);
+	color: rgba(10,10,10,1);
+	font-size: 0.9em;
+}
+
+a {
+	color: rgba(20,120,180, 1);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+label {
+	display: block;
+}
+
+input[type=text], input[type=password], textarea {
+	padding: 0.4em;
+	width: 50%;
+}
+
+textarea {
+	min-height: 8em;
+}
+
+.form-row {
+	padding: 0.6em;
+	margin: 0.4em 0;
+}
+
+.form-row .form-row {
+	padding: 0.6em 0;
+	margin: 0.4em 0;
+}
+
+
+.form-row.errors {
+	background: rgba(255, 50, 50, 0.1);
+	color: rgba(80, 0, 0, 1);
+}
+
+.wrapper {
+	width: 50em;
+	margin: 0 auto;
+}
+
+#login-panel {
+	float: right;
+}
+
+#login-panel ul {
+	margin: 0;
+	padding: 0;
+}
+
+#login-panel li {
+	list-style: none;
+}
+
+#main {
+	clear: both;
+	background: rgba(250,250,250,1);
+	padding: 2em;
+
+	box-shadow: 1px 1px 2px rgba(5,10,20, 0.1);
+
+	margin: 2em 0;
+}

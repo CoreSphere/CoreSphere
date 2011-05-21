@@ -1,0 +1,20 @@
+{% extends 'CoreSphereUserBundle:Frontend:layout.html.twig' %}
+
+{% block content %}
+    <h2>{{ 'headline.new'|trans }}</h2>
+
+    <form action="{{ path('create_user') }}" method="post" {{ form_enctype(form) }}>
+        {% include "CoreSphereUserBundle:Frontend:form.html.twig" %}
+        <p>
+            <input type="submit" value="{{ 'button.create'|trans }}" />
+        </p>
+    </form>
+
+    <div class="options">
+        <ul>
+            {#% if is_granted('ROLE_LIST_USER') %#}
+            <li><a href="{{ path('list_users') }}">{{ 'link.list'|trans }}</a></li>
+            {#% endif %#}
+        </ul>
+    </div>
+{% endblock %}

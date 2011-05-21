@@ -1,0 +1,9 @@
+login:
+  pattern:  /login
+  defaults: { _controller: CoreSphereLoginBundle:Frontend:login }
+
+login_check:
+    pattern: /login_check
+
+logout:
+    pattern: /logout
