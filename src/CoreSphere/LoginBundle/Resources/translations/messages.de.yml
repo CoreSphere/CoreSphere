@@ -1,3 +1,17 @@
-welcome: 'Willkommen %username%'
-login: 'Anmelden'
-logout: 'Abmelden'
+headline:
+    login_new: 'Einloggen'
+
+attribute:
+    login_username: 'Benutzername'
+    login_password: 'Passwort'
+    login_remember_me: 'Angemeldet bleiben'
+
+button:
+    login_create: 'Einloggen'
+
+link:
+    login_new: 'Anmelden'
+    login_delete: 'Abmelden'
+
+messages:
+    login_welcome: 'Willkommen!'

@@ -1,7 +1,11 @@
 {% extends 'CoreSphereUserBundle:Frontend:layout.html.twig' %}
 
+{% block title %}
+{{ 'headline.user_index'|trans }}
+{% endblock %}
+
 {% block content %}
-    <h2>{{ 'headline.index'|trans }}</h2>
+    <h2>{{ 'headline.user_index'|trans }}</h2>
     <table>
         <thead>
             <tr>
@@ -24,7 +28,7 @@
     <div class="options">
         <ul>
             {#% if is_granted('ROLE_CREATE_USER') %#}
-            <li><a href="{{ path('new_user') }}">{{ 'link.new'|trans }}</a></li>
+            <li><a href="{{ path('new_user') }}">{{ 'link.user_new'|trans }}</a></li>
             {#% endif %#}
         </ul>
     </div>

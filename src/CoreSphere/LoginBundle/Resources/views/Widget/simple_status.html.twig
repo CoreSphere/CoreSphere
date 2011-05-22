@@ -1,11 +1,11 @@
 {% extends 'CoreSphereLoginBundle:Widget:layout.html.twig'  %}
 
 {% block loggedin %}
-    {{ "welcome"|trans({'%username%':user.username}) }}
+    {{ "message.login_welcome"|trans({'%username%':user.username}) }}
     |
-    <a href="{{ path('logout') }}">{{ "logout"|trans }}</a>
+    <a href="{{ path('logout') }}">{{ "link.login_delete"|trans }}</a>
 {% endblock %}
 
 {% block loggedout %}
-    <a href="{{ path('login') }}">{{ "login"|trans }}</a>
+    <a href="{{ path('login') }}">{{ "link.login_new"|trans }}</a>
 {% endblock %}

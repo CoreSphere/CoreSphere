@@ -1,8 +1,12 @@
 {% extends "CoreSphereLoginBundle:Frontend:layout.html.twig" %}
 
+{% block title %}
+{{ "headline.login_new"|trans }}
+{% endblock %}
+
 {% block content %}
 
-<h1>{{ "Login"|trans }}</h1>
+<h1>{{ "headline.login_new"|trans }}</h1>
 
 <form action="{{ path('login_check') }}" method="post">
 
@@ -10,23 +14,23 @@
 	    <div class="flash error">{{ error.message }}</div>
 	{% endif %}
 
-    <div class="form_row">
-    	<label for="username">{{ "Username"|trans }}:</label>
+    <div class="form-row">
+    	<label for="username">{{ "attribute.login_username"|trans }}:</label>
 	    <input type="text" id="username" name="_username" value="{{ last_username }}" />
     </div>
 
-	<div class="form_row">
-    	<label for="password">{{ "Password"|trans }}:</label>
+	<div class="form-row">
+    	<label for="password">{{ "attribute.login_password"|trans }}:</label>
 	    <input type="password" id="password" name="_password" />
 	</div>
 
-	<div class="form_row">
+	<div class="form-row">
 		<input type="checkbox" id="remember_me" name="_remember_me" value="1" />
-		<label for="remember_me">{{ "Remember me"|trans }}</label>
+		<label for="remember_me">{{ "attribute.login_remember_me"|trans }}</label>
 	</div>
 
-	<div class="form_row">
-    	<input type="submit" value="{{ "Login"|trans }}" />
+	<div class="form-row">
+    	<input type="submit" value="{{ "button.login_create"|trans }}" />
 	</div>
 </form>
 

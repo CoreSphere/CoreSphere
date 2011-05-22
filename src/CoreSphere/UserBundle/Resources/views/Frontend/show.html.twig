@@ -1,7 +1,11 @@
 {% extends 'CoreSphereUserBundle:Frontend:layout.html.twig' %}
 
+{% block title %}
+{{ 'headline.user_show'|trans({'%username%': user.username}) }}
+{% endblock %}
+
 {% block content %}
-    <h2>{{ 'headline.show'|trans({'%username%': user.username}) }}</h2>
+    <h2>{{ 'headline.user_show'|trans({'%username%': user.username}) }}</h2>
     <dl>
         <dt>{{ 'attribute.user_email'|trans }}</dt>
         <dd>{{ user.email }}</dd>
@@ -12,10 +16,10 @@
     <div class="options">
         <ul>
             {#% if is_granted('ROLE_UPDATE_USER', user) %#}
-            <li><a href="{{ path('edit_user', {'id':user.id}) }}">{{ 'link.edit'|trans }}</a></li>
+            <li><a href="{{ path('edit_user', {'id':user.id}) }}">{{ 'link.user_edit'|trans }}</a></li>
             {#% endif %#}
             {#% if is_granted('ROLE_LIST_USER') %#}
-            <li><a href="{{ path('list_users') }}">{{ 'link.list'|trans }}</a></li>
+            <li><a href="{{ path('list_users') }}">{{ 'link.user_list'|trans }}</a></li>
             {#% endif %#}
         </ul>
     </div>

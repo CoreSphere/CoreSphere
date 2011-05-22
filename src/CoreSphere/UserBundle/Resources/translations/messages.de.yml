@@ -1,8 +1,8 @@
 headline:
-    index: 'Benutzerliste'
-    edit: 'Benutzer "%username%" bearbeiten'
-    new: 'Benutzer anlegen'
-    show: '%username%'
+    user_index: 'Benutzerliste'
+    user_edit: 'Benutzer "%username%" bearbeiten'
+    user_new: 'Benutzer anlegen'
+    user_show: '%username%'
 
 attribute:
     user_username: 'Benutzername'
@@ -16,11 +16,16 @@ attribute:
     user_description: 'Beschreibung'
 
 button:
-    create: 'Erstellen'
-    update: 'Aktualisieren'
+    user_create: 'Erstellen'
+    user_update: 'Aktualisieren'
 
 link:
-    list: 'zur Benutzerliste'
-    edit: 'Benutzer bearbeiten'
-    new: 'Benutzer anlegen'
-    cancel: 'Abbrechen'
+    user_list: 'zur Benutzerliste'
+    user_edit: 'Benutzer bearbeiten'
+    user_new: 'Benutzer anlegen'
+    user_cancel: 'Abbrechen'
+
+message:
+    success:
+        user_create: 'Benutzer wurder erfolgreich erstellt.'
+        user_update: 'Benutzer wurde erfolgreich bearbeitet.'

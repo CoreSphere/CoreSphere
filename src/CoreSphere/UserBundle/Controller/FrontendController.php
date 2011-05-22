@@ -86,7 +86,7 @@ class FrontendController extends Controller
             $this->persist($user);
 
 
-            $this->flash('success', 'Success!');
+            $this->flash('success', 'message.success.user_create');
             return $this->redirect($this->generateUrl('show_user', array('id' => $user->getId())));
         }
         else
@@ -121,7 +121,7 @@ class FrontendController extends Controller
 
             $this->persist($user);
 
-            $this->flash('success', 'Success!');
+            $this->flash('success', 'message.success.user_update');
             return $this->redirect($this->generateUrl('show_user', array('id' => $user->getId())));
         }
         else
