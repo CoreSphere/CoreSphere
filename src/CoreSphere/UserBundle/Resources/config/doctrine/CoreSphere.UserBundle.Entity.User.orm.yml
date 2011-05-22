@@ -20,4 +20,4 @@ CoreSphere\UserBundle\Entity\User:
         expiresAt:              { type: datetime, nullable: true }
         confirmationToken:      { type: string, length: 255, nullable: true }
 
-        description:            { type: text }
+        description:            { type: text, nullable: true }
