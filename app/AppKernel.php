@@ -22,6 +22,7 @@ class AppKernel extends Kernel
             new CoreSphere\ConsoleBundle\CoreSphereConsoleBundle(),
             new CoreSphere\UserBundle\CoreSphereUserBundle(),
             new CoreSphere\LoginBundle\CoreSphereLoginBundle(),
+            new CoreSphere\StaticBundle\CoreSphereStaticBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

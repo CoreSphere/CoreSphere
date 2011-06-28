@@ -1,3 +1,7 @@
+CoreSphereStaticBundle:
+    resource: "@CoreSphereStaticBundle/Resources/config/routing.yml"
+    prefix:   /
+
 user_list:
     pattern: /
     defaults: { _controller: CoreSphereUserBundle:Frontend:index }
