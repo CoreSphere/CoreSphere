@@ -1,0 +1,12 @@
+CoreSphere\StaticBundle\Entity\Page:
+    properties:
+        title:
+            - NotBlank: ~
+            - MinLength: 10
+            - MaxLength: 255
+        content:
+            - NotBlank: ~
+            - MinLength: 10
+        permalink:
+            - NotBlank: ~
+            - MaxLength: 255

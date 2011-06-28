@@ -1,0 +1,26 @@
+CoreSphere\StaticBundle\Entity\Page:
+  type: entity
+  table: null
+  fields:
+    id:
+      type: integer
+      id: true
+      generator:
+        strategy: AUTO
+    title:
+      type: string
+      length: '255'
+    content:
+      type: text
+    created_at:
+      type: datetime
+    published_at:
+      type: datetime
+      nullable: true
+    updated_at:
+      type: datetime
+    permalink:
+      type: string
+      length: 255
+  lifecycleCallbacks:
+    preUpdate: [ updated ]

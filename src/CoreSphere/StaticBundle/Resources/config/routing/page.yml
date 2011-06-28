@@ -1,0 +1,30 @@
+page:
+    pattern:  /
+    defaults: { _controller: "CoreSphereStaticBundle:Page:index" }
+
+page_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "CoreSphereStaticBundle:Page:show" }
+
+page_new:
+    pattern:  /new
+    defaults: { _controller: "CoreSphereStaticBundle:Page:new" }
+
+page_create:
+    pattern:  /create
+    defaults: { _controller: "CoreSphereStaticBundle:Page:create" }
+    requirements: { _method: post }
+
+page_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "CoreSphereStaticBundle:Page:edit" }
+
+page_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "CoreSphereStaticBundle:Page:update" }
+    requirements: { _method: post }
+
+page_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "CoreSphereStaticBundle:Page:delete" }
+    requirements: { _method: post }

@@ -1,0 +1,7 @@
+CoreSphereStaticBundle_page:
+    resource: "@CoreSphereStaticBundle/Resources/config/routing/page.yml"
+    prefix:   /page
+
+CoreSphereStaticBundle_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: CoreSphereStaticBundle:Default:index }
