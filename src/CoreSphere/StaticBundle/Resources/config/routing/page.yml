@@ -3,7 +3,7 @@ page:
     defaults: { _controller: "CoreSphereStaticBundle:Page:index" }
 
 page_show:
-    pattern:  /{id}/show
+    pattern:  /{permalink}/show
     defaults: { _controller: "CoreSphereStaticBundle:Page:show" }
 
 page_new:
@@ -16,15 +16,15 @@ page_create:
     requirements: { _method: post }
 
 page_edit:
-    pattern:  /{id}/edit
+    pattern:  /{permalink}/edit
     defaults: { _controller: "CoreSphereStaticBundle:Page:edit" }
 
 page_update:
-    pattern:  /{id}/update
+    pattern:  /{permalink}/update
     defaults: { _controller: "CoreSphereStaticBundle:Page:update" }
     requirements: { _method: post }
 
 page_delete:
-    pattern:  /{id}/delete
+    pattern:  /{permalink}/delete
     defaults: { _controller: "CoreSphereStaticBundle:Page:delete" }
     requirements: { _method: post }

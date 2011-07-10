@@ -32,17 +32,17 @@ class PageController extends Controller
      * Finds and displays a Page entity.
      *
      */
-    public function showAction($id)
+    public function showAction($permalink)
     {
         $em = $this->getDoctrine()->getEntityManager();
 
-        $entity = $em->getRepository('CoreSphereStaticBundle:Page')->find($id);
+        $entity = $em->getRepository('CoreSphereStaticBundle:Page')->findOneByPermalink($permalink);
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find Page entity.');
         }
 
-        $deleteForm = $this->createDeleteForm($id);
+        $deleteForm = $this->createDeleteForm($permalink);
 
         return $this->render('CoreSphereStaticBundle:Page:show.html.twig', array(
             'entity'      => $entity,
@@ -83,7 +83,7 @@ class PageController extends Controller
                 $em->persist($entity);
                 $em->flush();
 
-                return $this->redirect($this->generateUrl('page_show', array('id' => $entity->getId())));
+                return $this->redirect($this->generateUrl('page_show', array('permalink' => $entity -> getPermalink())));
                 
             }
         }
@@ -98,18 +98,18 @@ class PageController extends Controller
      * Displays a form to edit an existing Page entity.
      *
      */
-    public function editAction($id)
+    public function editAction($permalink)
     {
         $em = $this->getDoctrine()->getEntityManager();
 
-        $entity = $em->getRepository('CoreSphereStaticBundle:Page')->find($id);
+        $entity = $em->getRepository('CoreSphereStaticBundle:Page')->findOneByPermalink($permalink);
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find Page entity.');
         }
 
         $editForm = $this->createForm(new PageType(), $entity);
-        $deleteForm = $this->createDeleteForm($id);
+        $deleteForm = $this->createDeleteForm($permalink);
 
         return $this->render('CoreSphereStaticBundle:Page:edit.html.twig', array(
             'entity'      => $entity,
@@ -122,18 +122,18 @@ class PageController extends Controller
      * Edits an existing Page entity.
      *
      */
-    public function updateAction($id)
+    public function updateAction($permalink)
     {
         $em = $this->getDoctrine()->getEntityManager();
 
-        $entity = $em->getRepository('CoreSphereStaticBundle:Page')->find($id);
+        $entity = $em->getRepository('CoreSphereStaticBundle:Page')->findOneByPermalink($permalink);
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find Page entity.');
         }
 
         $editForm   = $this->createForm(new PageType(), $entity);
-        $deleteForm = $this->createDeleteForm($id);
+        $deleteForm = $this->createDeleteForm($permalink);
 
         $request = $this->getRequest();
 
@@ -145,7 +145,7 @@ class PageController extends Controller
                 $em->persist($entity);
                 $em->flush();
 
-                return $this->redirect($this->generateUrl('page_edit', array('id' => $id)));
+                return $this->redirect($this->generateUrl('page_edit', array('permalink' => $entity -> getPermalink())));
             }
         }
 
@@ -160,9 +160,9 @@ class PageController extends Controller
      * Deletes a Page entity.
      *
      */
-    public function deleteAction($id)
+    public function deleteAction($permalink)
     {
-        $form = $this->createDeleteForm($id);
+        $form = $this->createDeleteForm($permalink);
         $request = $this->getRequest();
 
         if ('POST' === $request->getMethod()) {
@@ -170,7 +170,7 @@ class PageController extends Controller
 
             if ($form->isValid()) {
                 $em = $this->getDoctrine()->getEntityManager();
-                $entity = $em->getRepository('CoreSphereStaticBundle:Page')->find($id);
+                $entity = $em->getRepository('CoreSphereStaticBundle:Page')->findOneByPermalink($permalink);
 
                 if (!$entity) {
                     throw $this->createNotFoundException('Unable to find Page entity.');
@@ -184,9 +184,9 @@ class PageController extends Controller
         return $this->redirect($this->generateUrl('page'));
     }
 
-    private function createDeleteForm($id)
+    private function createDeleteForm($permalink)
     {
-        return $this->createFormBuilder(array('id' => $id))
+        return $this->createFormBuilder(array('permalink' => $permalink))
             ->add('id', 'hidden')
             ->getForm()
         ;

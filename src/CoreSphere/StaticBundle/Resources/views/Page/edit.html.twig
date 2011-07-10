@@ -7,7 +7,7 @@
 {% block content %}
 <h2>{{ 'headline.page_index'|trans }} - {{ 'action.page_edit'|trans }}</h2>
 
-<form action="{{ path('page_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
+<form action="{{ path('page_update', { 'permalink': entity.permalink }) }}" method="post" {{ form_enctype(edit_form) }}>
     {{ form_widget(edit_form) }}
     <p>
         <button type="submit">{{ 'action.page_edit'|trans }}</button>
@@ -21,7 +21,7 @@
         </a>
     </li>
     <li>
-        <form action="{{ path('page_delete', { 'id': entity.id }) }}" method="post">
+        <form action="{{ path('page_delete', { 'permalink': entity.permalink }) }}" method="post">
             {{ form_widget(delete_form) }}
             <button type="submit">{{ 'action.page_delete'|trans }}</button>
         </form>

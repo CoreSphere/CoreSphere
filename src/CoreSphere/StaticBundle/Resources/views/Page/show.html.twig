@@ -48,12 +48,12 @@
         </a>
     </li>
     <li>
-        <a href="{{ path('page_edit', { 'id': entity.id }) }}">
+        <a href="{{ path('page_edit', { 'permalink': entity.permalink }) }}">
             {{ 'action.page_edit'|trans }}
         </a>
     </li>
     <li>
-        <form action="{{ path('page_delete', { 'id': entity.id }) }}" method="post">
+        <form action="{{ path('page_delete', { 'permalink': entity.permalink }) }}" method="post">
             {{ form_widget(delete_form) }}
             <button type="submit">{{ 'action.page_delete'|trans }}</button>
         </form>
