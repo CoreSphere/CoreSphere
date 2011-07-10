@@ -19,7 +19,7 @@ CoreSphere\StaticBundle\Entity\Page:
       nullable: true
     updatedAt:
       type: datetime
-    permalink:
+    slug:
       type: string
       length: 255
   lifecycleCallbacks:

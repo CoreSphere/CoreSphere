@@ -7,6 +7,7 @@ CoreSphere\StaticBundle\Entity\Page:
         content:
             - NotBlank: ~
             - MinLength: 10
-        permalink:
+        slug:
             - NotBlank: ~
             - MaxLength: 255
+            - Regex: "~^[a-z_-]+$~i"

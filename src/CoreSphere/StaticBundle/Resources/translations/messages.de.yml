@@ -8,7 +8,7 @@ attribute:
     staticbundle_static_createdAt: 'Erstellt am'
     staticbundle_static_publishedAt: 'Veröffentlicht am'
     staticbundle_static_updatedAt: 'Aktualisiert am'
-    staticbundle_static_permalink: 'Dauerhafter Link'
+    staticbundle_static_slug: 'Dauerhafter Link'
     staticbundle_static_actions: 'Aktionen'
 
 action:

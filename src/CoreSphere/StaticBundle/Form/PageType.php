@@ -13,7 +13,7 @@ class PageType extends AbstractType
             ->add('title')
             ->add('content')
             ->add('publishedAt')
-            ->add('permalink')
+            ->add('slug')
         ;
     }
 	public function getName()

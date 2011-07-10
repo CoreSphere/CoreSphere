@@ -13,11 +13,11 @@
 
 <br />
 
-<table class="record_permalink">
+<table class="record_slug">
     <tbody>
         <tr>
-            <th>{{ 'attribute.staticbundle_static_permalink'|trans }}</th>
-												<td><a href="{{ entity.permalink }}" target="_blank">{{ entity.permalink }}</a></td>
+            <th>{{ 'attribute.staticbundle_static_slug'|trans }}</th>
+												<td><a href="{{ entity.slug }}" target="_blank">{{ entity.slug }}</a></td>
 								</tr>
     </tbody>
 </table>
@@ -48,12 +48,12 @@
         </a>
     </li>
     <li>
-        <a href="{{ path('page_edit', { 'permalink': entity.permalink }) }}">
+        <a href="{{ path('page_edit', { 'slug': entity.slug }) }}">
             {{ 'action.page_edit'|trans }}
         </a>
     </li>
     <li>
-        <form action="{{ path('page_delete', { 'permalink': entity.permalink }) }}" method="post">
+        <form action="{{ path('page_delete', { 'slug': entity.slug }) }}" method="post">
             {{ form_widget(delete_form) }}
             <button type="submit">{{ 'action.page_delete'|trans }}</button>
         </form>

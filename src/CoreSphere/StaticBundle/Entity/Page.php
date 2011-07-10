@@ -50,9 +50,9 @@ class Page
     private $updatedAt;
 
     /**
-     * @var string $permalink
+     * @var string $slug
      */
-    private $permalink;
+    private $slug;
 
 
     /**
@@ -166,22 +166,22 @@ class Page
     }
 
     /**
-     * Set permalink
+     * Set slug
      *
-     * @param string $permalink
+     * @param string $slug
      */
-    public function setPermalink($permalink)
+    public function setSlug($slug)
     {
-        $this->permalink = $permalink;
+        $this->slug = $slug;
     }
 
     /**
-     * Get permalink
+     * Get slug
      *
      * @return string 
      */
-    public function getPermalink()
+    public function getSlug()
     {
-        return $this->permalink;
+        return $this->slug;
     }
 }
