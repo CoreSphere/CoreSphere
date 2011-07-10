@@ -26,28 +26,28 @@ class Page
 
 		public function __construct()
 		{
-			$this->created_at = $this->updated_at = new \DateTime("now");
+			$this->createdAt = $this->updatedAt = new \DateTime("now");
 		}
 		
     /**
-     * @var datetime $created_at
+     * @var datetime $createdAt
      */
-    private $created_at;
+    private $createdAt;
 
     /**
-     * @var datetime $published_at
+     * @var datetime $publishedAt
      */
-    private $published_at;
+    private $publishedAt;
 
     public function updated()
     {
-        $this->updated_at = new \DateTime("now");
+        $this->updatedAt = new \DateTime("now");
     }
 		
     /**
-     * @var datetime $updated_at
+     * @var datetime $updatedAt
      */
-    private $updated_at;
+    private $updatedAt;
 
     /**
      * @var string $permalink
@@ -106,63 +106,63 @@ class Page
     }
 
     /**
-     * Set created_at
+     * Set createdAt
      *
      * @param datetime $createdAt
      */
     public function setCreatedAt($createdAt)
     {
-        $this->created_at = $createdAt;
+        $this->createdAt = $createdAt;
     }
 
     /**
-     * Get created_at
+     * Get createdAt
      *
      * @return datetime 
      */
     public function getCreatedAt()
     {
-        return $this->created_at;
+        return $this->createdAt;
     }
 
     /**
-     * Set published_at
+     * Set publishedAt
      *
      * @param datetime $publishedAt
      */
     public function setPublishedAt($publishedAt)
     {
-        $this->published_at = $publishedAt;
+        $this->publishedAt = $publishedAt;
     }
 
     /**
-     * Get published_at
+     * Get publishedAt
      *
      * @return datetime 
      */
     public function getPublishedAt()
     {
-        return $this->published_at;
+        return $this->publishedAt;
     }
 
     /**
-     * Set updated_at
+     * Set updatedAt
      *
      * @param datetime $updatedAt
      */
     public function setUpdatedAt($updatedAt)
     {
-        $this->updated_at = $updatedAt;
+        $this->updatedAt = $updatedAt;
     }
 
     /**
-     * Get updated_at
+     * Get updatedAt
      *
      * @return datetime 
      */
     public function getUpdatedAt()
     {
-        return $this->updated_at;
+        return $this->updatedAt;
     }
 
     /**

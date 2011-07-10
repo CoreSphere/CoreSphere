@@ -2,14 +2,14 @@ headline:
     page_index: 'Statische Seiten'
 
 attribute:
-    page_id: 'Id'
-    page_title: 'Titel'
-    page_content: 'Inhalt'
-    page_created_at: 'Erstellt am'
-    page_published_at: 'Veröffentlicht am'
-    page_updated_at: 'Aktualisiert am'
-    page_permalink: 'Dauerhafter Link'
-    page_actions: 'Aktionen'
+    staticbundle_static_id: 'Id'
+    staticbundle_static_title: 'Titel'
+    staticbundle_static_content: 'Inhalt'
+    staticbundle_static_createdAt: 'Erstellt am'
+    staticbundle_static_publishedAt: 'Veröffentlicht am'
+    staticbundle_static_updatedAt: 'Aktualisiert am'
+    staticbundle_static_permalink: 'Dauerhafter Link'
+    staticbundle_static_actions: 'Aktionen'
 
 action:
     page_show: 'Anzeigen'

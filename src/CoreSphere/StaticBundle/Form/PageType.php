@@ -12,7 +12,7 @@ class PageType extends AbstractType
         $builder
             ->add('title')
             ->add('content')
-            ->add('published_at')
+            ->add('publishedAt')
             ->add('permalink')
         ;
     }

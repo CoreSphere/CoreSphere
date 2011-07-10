@@ -12,12 +12,12 @@ CoreSphere\StaticBundle\Entity\Page:
       length: '255'
     content:
       type: text
-    created_at:
+    createdAt:
       type: datetime
-    published_at:
+    publishedAt:
       type: datetime
       nullable: true
-    updated_at:
+    updatedAt:
       type: datetime
     permalink:
       type: string
