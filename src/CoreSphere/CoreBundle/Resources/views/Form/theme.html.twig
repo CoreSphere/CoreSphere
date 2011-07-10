@@ -24,13 +24,16 @@
 {% endblock %}
 
 {% block field_label %}
-    <label for="{{ id }}">
-       {{ ('attribute.'~id)|trans }}
-        {% if required %}
-            <span class="form-required" title="This field is required">*</span>
-        {% endif %}
-    </label>
-{% endblock %}
+		{% spaceless %}
+    <label for="{{ id }}"{% for attrname,attrvalue in attr %} {{attrname}}="{{attrvalue}}"{% endfor %}>{{ ('attribute.'~id)|trans }}</label>
+		{% endspaceless %}
+{% endblock field_label %}
+
+{% block form_label %}
+		{% spaceless %}
+    <label {% for attrname,attrvalue in attr %} {{attrname}}="{{attrvalue}}"{% endfor %}>{{ ('attribute.'~id)|trans }}</label>
+		{% endspaceless %}
+{% endblock form_label %}
 
 
 {% block repeated_row %}
