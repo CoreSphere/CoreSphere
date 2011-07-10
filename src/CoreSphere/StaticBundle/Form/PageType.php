@@ -16,4 +16,8 @@ class PageType extends AbstractType
             ->add('permalink')
         ;
     }
+	public function getName()
+    {
+        return 'staticbundle_static';
+    }
 }

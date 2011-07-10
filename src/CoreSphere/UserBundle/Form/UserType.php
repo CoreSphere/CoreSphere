@@ -21,4 +21,8 @@ class UserType extends AbstractType
 
 		$builder->add('description');
     }
+	public function getName()
+    {
+        return 'userbundle_user';
+    }
 }
