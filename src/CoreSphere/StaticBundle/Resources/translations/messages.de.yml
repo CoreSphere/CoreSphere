@@ -1,0 +1,21 @@
+headline:
+    page_index: 'Statische Seiten'
+
+attribute:
+    page_id: 'Id'
+    page_title: 'Titel'
+    page_content: 'Inhalt'
+    page_created_at: 'Erstellt am'
+    page_published_at: 'Veröffentlicht am'
+    page_updated_at: 'Aktualisiert am'
+    page_permalink: 'Dauerhafter Link'
+    page_actions: 'Aktionen'
+
+action:
+    page_show: 'Anzeigen'
+    page_create: 'Erstellen'
+    page_edit: 'Bearbeiten'
+    page_delete: 'Entfernen'
+    page_new_page: 'Neue Seite anlegen'
+    page_to_index: 'Zur Liste'
+
