@@ -113,9 +113,10 @@ class PageController extends Controller
         $deleteForm = $this->createDeleteForm($slug);
 
         return $this->render('CoreSphereStaticBundle:Page:edit.html.twig', array(
-            'entity'      => $entity,
-            'edit_form'   => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
+            'persisted_slug'    => $slug,
+            'entity'            => $entity,
+            'edit_form'         => $editForm->createView(),
+            'delete_form'       => $deleteForm->createView(),
         ));
     }
 
@@ -152,9 +153,10 @@ class PageController extends Controller
         }
 
         return $this->render('CoreSphereStaticBundle:Page:edit.html.twig', array(
-            'entity'      => $entity,
-            'edit_form'   => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
+            'persisted_slug'    => $slug,
+            'entity'            => $entity,
+            'edit_form'         => $editForm->createView(),
+            'delete_form'       => $deleteForm->createView(),
         ));
     }
 

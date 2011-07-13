@@ -7,12 +7,12 @@
 {% block content %}
 <h2>{{ 'headline.page_index'|trans }} - {{ 'action.page_edit'|trans }}</h2>
 
-<form action="{{ path('page_update', { 'slug': entity.slug }) }}" method="post" {{ form_enctype(edit_form) }}>
     {{ form_widget(edit_form) }}
     <p>
         <button type="submit">{{ 'action.page_edit'|trans }}</button>
     </p>
 </form>
+    <form action="{{ path('page_update', { 'slug': persisted_slug }) }}" method="post" {{ form_enctype(edit_form) }}>
 
 <ul class="record_actions">
     <li>
