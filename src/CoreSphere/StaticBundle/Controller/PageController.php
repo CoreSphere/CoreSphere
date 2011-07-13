@@ -83,8 +83,9 @@ class PageController extends Controller
                 $em->persist($entity);
                 $em->flush();
 
+                $this->flash('success', 'message.success.staticbundle_page_create');
                 return $this->redirect($this->generateUrl('page_show', array('slug' => $entity -> getSlug())));
-                
+
             }
         }
 
@@ -145,7 +146,8 @@ class PageController extends Controller
                 $em->persist($entity);
                 $em->flush();
 
-                return $this->redirect($this->generateUrl('page_edit', array('slug' => $entity -> getSlug())));
+                $this->flash('success', 'message.success.staticbundle_page_update');
+                return $this->redirect($this->generateUrl('page_show', array('slug' => $entity -> getSlug())));
             }
         }
 
@@ -181,6 +183,7 @@ class PageController extends Controller
             }
         }
 
+        $this->flash('success', 'message.success.staticbundle_page_delete');
         return $this->redirect($this->generateUrl('page'));
     }
 
@@ -190,5 +193,10 @@ class PageController extends Controller
             ->add('id', 'hidden')
             ->getForm()
         ;
+    }
+
+    private function flash($type, $message)
+    {
+        $this->get('session')->setFlash($type, $this->get('translator')->trans($message));
     }
 }

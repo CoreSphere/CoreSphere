@@ -19,3 +19,8 @@ action:
     page_new_page: 'Neue Seite anlegen'
     page_to_index: 'Zur Liste'
 
+message:
+    success:
+        staticbundle_page_create: 'Die Seite wurde erfolgreich erstellt.'
+        staticbundle_page_update: 'Die Seite wurde erfolgreich geändert.'
+        staticbundle_page_delete: 'Die Seite wurde erfolgreich gelöscht.'
