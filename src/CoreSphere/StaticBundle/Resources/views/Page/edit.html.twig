@@ -21,6 +21,11 @@
             </a>
         </li>
         <li>
+			<a href="{{ path('page_show', { 'slug': persisted_slug }) }}">
+			    {{ 'action.staticbundle_page_show'|trans }}
+			</a>
+		</li>
+        <li>
             <form action="{{ path('page_delete', { 'slug': entity.slug }) }}" method="post">
                 {{ form_widget(delete_form) }}
                 <button type="submit" class="link_button">{{ 'action.staticbundle_page_delete'|trans }}</button>
