@@ -18,6 +18,15 @@ a:hover {
 	text-decoration: underline;
 }
 
+input[type=text], input[type=password], textarea {
+	padding: 0.4em;
+	width: 90%;
+}
+
+textarea {
+	min-height: 8em;
+}
+
 .link_button {
   border: none;
   background: none;
@@ -92,15 +101,6 @@ label {
 
 .spaced_box {
   padding: 2em 0;
-}
-
-input[type=text], input[type=password], textarea {
-	padding: 0.4em;
-	width: 90%;
-}
-
-textarea {
-	min-height: 8em;
 }
 
 .form-row {
