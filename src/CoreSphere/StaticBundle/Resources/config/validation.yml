@@ -2,7 +2,7 @@ CoreSphere\StaticBundle\Entity\Page:
     properties:
         title:
             - NotBlank: ~
-            - MinLength: 10
+            - MinLength: 2
             - MaxLength: 255
         content:
             - NotBlank: ~
