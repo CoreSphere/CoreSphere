@@ -9,9 +9,9 @@
 
     <form action="{{ path('page_update', { 'slug': persisted_slug }) }}" method="post" {{ form_enctype(edit_form) }}>
         {{ form_widget(edit_form) }}
-        <p>
+        <div class="form-actions">
             <button type="submit" class="button">{{ 'action.staticbundle_page_edit'|trans }}</button>
-        </p>
+        </div>
     </form>
 
     <ul class="record_actions_row">

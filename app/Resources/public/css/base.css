@@ -107,7 +107,8 @@ label {
   padding: 2em 0;
 }
 
-.form-row {
+.form-row,
+.form-actions {
 	padding: 0.6em;
 	margin: 0.4em 0;
 }

@@ -9,9 +9,9 @@
 
     <form action="{{ path('page_create') }}" method="post" {{ form_enctype(form) }}>
         {{ form_widget(form) }}
-        <p>
+        <div class="form-actions">
             <button type="submit" class="button">{{ 'action.staticbundle_page_create'|trans }}</button>
-        </p>
+        </div>
     </form>
 
     <ul class="record_actions_row">
