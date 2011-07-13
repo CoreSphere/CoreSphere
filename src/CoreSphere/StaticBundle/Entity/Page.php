@@ -24,11 +24,6 @@ class Page
      */
     private $content;
 
-		public function __construct()
-		{
-			$this->createdAt = $this->updatedAt = new \DateTime("now");
-		}
-		
     /**
      * @var datetime $createdAt
      */
@@ -39,11 +34,6 @@ class Page
      */
     private $publishedAt;
 
-    public function updated()
-    {
-        $this->updatedAt = new \DateTime("now");
-    }
-		
     /**
      * @var datetime $updatedAt
      */
@@ -55,10 +45,15 @@ class Page
     private $slug;
 
 
+    public function __construct()
+	{
+		$this->publishedAt = $this->createdAt = $this->updatedAt = new \DateTime("now");
+	}
+
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -78,7 +73,7 @@ class Page
     /**
      * Get title
      *
-     * @return string 
+     * @return string
      */
     public function getTitle()
     {
@@ -98,7 +93,7 @@ class Page
     /**
      * Get content
      *
-     * @return text 
+     * @return text
      */
     public function getContent()
     {
@@ -118,7 +113,7 @@ class Page
     /**
      * Get createdAt
      *
-     * @return datetime 
+     * @return datetime
      */
     public function getCreatedAt()
     {
@@ -138,7 +133,7 @@ class Page
     /**
      * Get publishedAt
      *
-     * @return datetime 
+     * @return datetime
      */
     public function getPublishedAt()
     {
@@ -158,7 +153,7 @@ class Page
     /**
      * Get updatedAt
      *
-     * @return datetime 
+     * @return datetime
      */
     public function getUpdatedAt()
     {
@@ -178,10 +173,15 @@ class Page
     /**
      * Get slug
      *
-     * @return string 
+     * @return string
      */
     public function getSlug()
     {
         return $this->slug;
+    }
+
+    public function updated()
+    {
+        $this->updatedAt = new \DateTime("now");
     }
 }
