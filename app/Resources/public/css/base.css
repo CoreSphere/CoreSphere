@@ -135,7 +135,7 @@ textarea {
 	list-style: none;
 }
 
-#main {
+.content_box {
 	clear: both;
 	background: rgba(250,250,250,1);
 	padding: 2em;
