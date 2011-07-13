@@ -74,6 +74,17 @@ label {
 
 .record_actions_row li {
   display: inline;
+  padding: 0 1em;
+  border-left: 1px solid rgba(200,200,200,1);
+}
+
+.record_actions_row li:first-child {
+  border-left: none;
+}
+
+.record_actions_row form,
+.record_actions_row div {
+  display: inline;
 }
 
 .spaced_box {
