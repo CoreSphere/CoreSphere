@@ -14,13 +14,12 @@
         %}
             <link rel="stylesheet" type="text/css" href="{{ asset_url }}" />
         {% endstylesheets %}
-        {% block stylesheets %}
-
-        {% endblock %}
+        {% block stylesheets %}{% endblock %}
 
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
+
         {% block body %}
         <div class="wrapper">
             <ul id="login-panel">
@@ -30,7 +29,6 @@
                 {% include "CoreSphereCoreBundle:Snippet:message_box.html.twig" %}
                 {% block content %}{% endblock %}
             </div>
-
         </div>
         {% endblock %}
 
