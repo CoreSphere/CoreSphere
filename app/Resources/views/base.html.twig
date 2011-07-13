@@ -6,6 +6,7 @@
 
         <title>{% block title %}{{ 'title.app'|trans }}{% endblock %}</title>
 
+        {% block meta %}{% endblock %}
         {% stylesheets  'css/reset.css'
                         'css/*'
         %}
