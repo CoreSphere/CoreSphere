@@ -17,21 +17,21 @@
 
         <dt>{{ 'attribute.staticbundle_page_createdAt'|trans }}</dt>
         <dd>
-            <time datetime="{{ entity.createdAt|date('Y-m-d\TH:i:sP') }}">
+            <time datetime="{{ entity.createdAt|date('Y-m-d\\TH:i:sP') }}">
                 {{ entity.createdat|date('Y-m-d H:i:s') }}
             </time>
         </dd>
 
         <dt>{{ 'attribute.staticbundle_page_publishedAt'|trans }}</dt>
         <dd>
-            <time datetime="{{ entity.publishedAt|date('Y-m-d\TH:i:sP') }}">
+            <time datetime="{{ entity.publishedAt|date('Y-m-d\\TH:i:sP') }}">
                 {{ entity.publishedat|date('Y-m-d H:i:s') }}
             </time>
         </dd>
 
         <dt>{{ 'attribute.staticbundle_page_updatedAt'|trans }}</dt>
         <dd>
-            <time datetime="{{ entity.updatedAt|date('Y-m-d\TH:i:sP') }}">
+            <time datetime="{{ entity.updatedAt|date('Y-m-d\\TH:i:sP') }}">
                 {{ entity.updatedat|date('Y-m-d H:i:s') }}
             </time>
         </dd>

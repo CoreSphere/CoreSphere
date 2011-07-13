@@ -23,9 +23,9 @@
     			<tr>
 					<td>{{ entity.title }}</td>
 					<td>{{ entity.content|truncate(20) }}</td>
-					<td><time datetime="{{ entity.createdAt|date('Y-m-d\TH:i:sP') }}">{{ entity.createdAt|date('Y-m-d H:i') }}</time></td>
-					<td><time datetime="{{ entity.publishedAt|date('Y-m-d\TH:i:sP') }}">{{ entity.publishedAt|date('Y-m-d H:i') }}</time></td>
-					<td><time datetime="{{ entity.updatedAt|date('Y-m-d\TH:i:sP') }}">{{ entity.updatedAt|date('Y-m-d H:i') }}</time></td>
+					<td><time datetime="{{ entity.createdAt|date('Y-m-d\\TH:i:sP') }}">{{ entity.createdAt|date('Y-m-d H:i') }}</time></td>
+					<td><time datetime="{{ entity.publishedAt|date('Y-m-d\\TH:i:sP') }}">{{ entity.publishedAt|date('Y-m-d H:i') }}</time></td>
+					<td><time datetime="{{ entity.updatedAt|date('Y-m-d\\TH:i:sP') }}">{{ entity.updatedAt|date('Y-m-d H:i') }}</time></td>
 					<td>{{ entity.slug }}</td>
 					<td>
 						<ul class="record_actions">
