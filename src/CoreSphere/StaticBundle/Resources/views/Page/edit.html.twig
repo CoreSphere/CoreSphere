@@ -28,7 +28,9 @@
         <li>
             <form action="{{ path('page_delete', { 'slug': entity.slug }) }}" method="post">
                 {{ form_widget(delete_form) }}
-                <button type="submit" class="link_button">{{ 'action.staticbundle_page_delete'|trans }}</button>
+                <button type="submit" class="link_button" data-confirm="{{ 'action.staticbundle_page_confirm'|trans }}">
+                    {{ 'action.staticbundle_page_delete'|trans }}
+                </button>
             </form>
         </li>
     </ul>

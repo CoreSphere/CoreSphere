@@ -19,6 +19,7 @@ action:
     staticbundle_page_delete: 'Entfernen'
     staticbundle_page_new_page: 'Neue Seite anlegen'
     staticbundle_page_to_index: 'Zur Liste'
+    staticbundle_page_confirm: 'Bist du sicher?'
 
 message:
     success:
