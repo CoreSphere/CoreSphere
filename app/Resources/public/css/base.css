@@ -3,6 +3,7 @@ body {
 	background: rgba(240,240,240,1);
 	color: rgba(10,10,10,1);
 	font-size: 0.9em;
+	line-height: 1.4;
 }
 
 a {
