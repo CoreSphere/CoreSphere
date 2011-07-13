@@ -156,3 +156,17 @@
   border-bottom: 1px solid rgba(220,220,130,1);
   padding: 0 0.2em;
 }
+
+.rich_text small {
+  font-size: 75%;
+}
+
+.rich_text sup {
+  vertical-align: super;
+  font-size: 80%;
+}
+
+.rich_text sub {
+  vertical-align: sub;
+  font-size: 80%;
+}
