@@ -3,12 +3,16 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>{% block title %}{{ 'title.app'|trans }}{% endblock %}</title>
+
+        {% stylesheets  'css/reset.css'
+                        'css/*'
+        %}
+            <link rel="stylesheet" type="text/css" href="{{ asset_url }}" />
+        {% endstylesheets %}
         {% block stylesheets %}
 
         {% endblock %}
-        {% stylesheets 'css/*' %}
-            <link rel="stylesheet" type="text/css" href="{{ asset_url }}" />
-        {% endstylesheets %}
+
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
