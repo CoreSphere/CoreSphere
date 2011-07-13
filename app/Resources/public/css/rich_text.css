@@ -1,0 +1,158 @@
+.rich_text {
+  color: rgba(30,30,30,1);
+}
+
+.rich_text h1 {
+  font-size: 1.9em;
+  font-weight: bold;
+}
+
+.rich_text h2 {
+  font-size: 1.7em;
+  font-weight: bold;
+}
+
+.rich_text h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.rich_text h4 {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.rich_text h5 {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.rich_text h6 {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.rich_text p {
+  padding: 0.5em 0;
+}
+
+.rich_text strong {
+  font-weight: bold;
+}
+
+.rich_text em {
+  font-style: italic;
+}
+
+.rich_text pre {
+  margin: 1em 0 1em 2em;
+  padding: 0.5em 0.8em;
+  background: rgba(20,20,20,0.1);
+
+  box-shadow: inset 0 0 4px rgba(0,0,0,.1);
+}
+
+.rich_text pre code {
+  background: none;
+  border: none;
+}
+
+.rich_text code {
+  border: 1px solid rgba(20,20,20,0.2);
+  background: 1px solid rgba(20,20,20,0.1);
+  font-family: 'Bitstream Vera Sans Mono', Courier, monospace;
+}
+
+.rich_text blockquote {
+  padding: 0.5em 1em;
+  background-color: rgba(20,20,20,0.1);
+}
+
+.rich_text table {
+  width: 100%;
+  margin: 1em 0;
+}
+
+.rich_text thead {
+  border-bottom: 1px solid rgba(220,220,220,1);
+}
+
+.rich_text tfoot {
+  border-top: 1px solid rgba(220,220,220,1);
+}
+
+.rich_text th,
+.rich_text td {
+  padding: 0.3em 1em 0.3em 0.7em;
+}
+
+.rich_text th {
+  font-weight: bold;
+}
+
+.rich_text ul,
+.rich_text ol {
+  padding: 0.5em 2em;
+}
+
+.rich_text ul ul,
+.rich_text ul ol,
+.rich_text ol ul,
+.rich_text ol ol {
+  padding: 0 2em;
+}
+
+.rich_text ul li {
+  list-style-type: disc;
+}
+
+.rich_text ol li {
+  list-style-type: decimal;
+}
+
+.rich_text li {
+  padding: 0.2em 0;
+  margin-left: 1em;
+  list-style-position: outside;
+}
+
+.rich_text acronym,
+.rich_text abbr {
+  border-bottom: 1px dotted rgba(30,30,30,1);
+  cursor: help;
+}
+
+.rich_text cite {
+  font-style: italic;
+}
+
+.rich_text dl {
+  padding: 0.5em 0;
+}
+
+.rich_text dt {
+  font-weight: bold;
+}
+
+.rich_text dd {
+  padding: 0.3em 0 1em 0.5em;
+}
+
+.rich_text del {
+  color: rgba(80,30,30,1);
+  background-color: rgba(255,210,210,1);
+  text-decoration: line-through;
+  padding: 0 0.2em;
+}
+
+.rich_text ins {
+  background-color: rgba(210,255,210,1);
+  border-bottom: 1px solid rgba(130,220,130,1);
+  padding: 0 0.2em;
+}
+
+.rich_text mark {
+  background-color: rgba(255,255,180,1);
+  border-bottom: 1px solid rgba(220,220,130,1);
+  padding: 0 0.2em;
+}
