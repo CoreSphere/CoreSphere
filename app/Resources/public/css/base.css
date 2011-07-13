@@ -51,6 +51,7 @@ textarea {
 
 #login-panel {
 	float: right;
+	padding: 1em 0;
 }
 
 #login-panel ul {
