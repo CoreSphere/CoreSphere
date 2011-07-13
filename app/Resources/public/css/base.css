@@ -21,7 +21,7 @@ label {
 
 input[type=text], input[type=password], textarea {
 	padding: 0.4em;
-	width: 50%;
+	width: 90%;
 }
 
 textarea {
