@@ -109,6 +109,10 @@ acronym {
 	font-variant: normal;
 }
 
+sup, sub, small {
+  font-size: 100%;
+}
+
 sup {
 	vertical-align: baseline;
 }
