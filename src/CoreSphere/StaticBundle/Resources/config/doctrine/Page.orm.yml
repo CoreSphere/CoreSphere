@@ -22,5 +22,6 @@ CoreSphere\StaticBundle\Entity\Page:
     slug:
       type: string
       length: 255
+      unique: true
   lifecycleCallbacks:
     preUpdate: [ updated ]

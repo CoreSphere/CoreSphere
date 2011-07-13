@@ -1,4 +1,6 @@
 CoreSphere\StaticBundle\Entity\Page:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: { fields: slug }
     properties:
         title:
             - NotBlank: ~
