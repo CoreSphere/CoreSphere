@@ -1,23 +1,24 @@
 headline:
-    page_index: 'Statische Seiten'
+    staticbundle_page_index: 'Statische Seiten'
+    staticbundle_page_edit: 'Statische Seite bearbeiten'
+    staticbundle_page_new: 'Statische Seite erstellen'
 
 attribute:
-    staticbundle_static_id: 'Id'
-    staticbundle_static_title: 'Titel'
-    staticbundle_static_content: 'Inhalt'
-    staticbundle_static_createdAt: 'Erstellt am'
-    staticbundle_static_publishedAt: 'Veröffentlicht am'
-    staticbundle_static_updatedAt: 'Aktualisiert am'
-    staticbundle_static_slug: 'Dauerhafter Link'
-    staticbundle_static_actions: 'Aktionen'
+    staticbundle_page_id: 'Id'
+    staticbundle_page_title: 'Titel'
+    staticbundle_page_content: 'Inhalt'
+    staticbundle_page_createdAt: 'Erstellt am'
+    staticbundle_page_publishedAt: 'Veröffentlicht am'
+    staticbundle_page_updatedAt: 'Aktualisiert am'
+    staticbundle_page_slug: 'URL Identitfigkations-Segment'
 
 action:
-    page_show: 'Anzeigen'
-    page_create: 'Erstellen'
-    page_edit: 'Bearbeiten'
-    page_delete: 'Entfernen'
-    page_new_page: 'Neue Seite anlegen'
-    page_to_index: 'Zur Liste'
+    staticbundle_page_show: 'Anzeigen'
+    staticbundle_page_create: 'Erstellen'
+    staticbundle_page_edit: 'Bearbeiten'
+    staticbundle_page_delete: 'Entfernen'
+    staticbundle_page_new_page: 'Neue Seite anlegen'
+    staticbundle_page_to_index: 'Zur Liste'
 
 message:
     success:

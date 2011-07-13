@@ -15,8 +15,69 @@ a:hover {
 	text-decoration: underline;
 }
 
+.link_button {
+  border: none;
+  background: none;
+  color: rgba(20,120,180, 1);
+	text-decoration: none;
+	cursor: pointer;
+	padding: 0;
+	margin: 0;
+}
+
+.link_button:hover {
+	text-decoration: underline;
+}
+
 label {
 	display: block;
+}
+
+.main_headline {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.record_properties dt {
+  font-weight: bold;
+}
+
+.record_properties dd {
+  margin-bottom: 1em;
+}
+
+.records_list th,
+.records_list td {
+  padding: 0.2em 1em 0.2em 0.3em;
+}
+
+.records_list th {
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.records_list td {
+  vertical-align: top;
+}
+
+.records_list thead {
+  border-bottom: 1px solid rgba(190,190,190,1);
+}
+
+.records_list {
+  border-bottom: 1px solid rgba(190,190,190,1);
+}
+
+.record_actions_row {
+  margin: 1em 0;
+}
+
+.record_actions_row li {
+  display: inline;
+}
+
+.spaced_box {
+  padding: 2em 0;
 }
 
 input[type=text], input[type=password], textarea {

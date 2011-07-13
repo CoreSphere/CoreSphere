@@ -1,24 +1,24 @@
 {% extends 'CoreSphereStaticBundle:Page:layout.html.twig' %}
 
 {% block title %}
-{{ 'headline.page_index'|trans }}
+    {{ 'headline.staticbundle_page_edit'|trans }}
 {% endblock %}
 
 {% block content %}
-<h2>{{ 'headline.page_index'|trans }} - {{ 'action.page_create'|trans }}</h2>
+    <h1 class="main_headline">{{ 'headline.staticbundle_page_edit'|trans }}</h1>
 
-<form action="{{ path('page_create') }}" method="post" {{ form_enctype(form) }}>
-    {{ form_widget(form) }}
-    <p>
-        <button type="submit">{{ 'action.page_create'|trans }}</button>
-    </p>
-</form>
+    <form action="{{ path('page_create') }}" method="post" {{ form_enctype(form) }}>
+        {{ form_widget(form) }}
+        <p>
+            <button type="submit" class="button">{{ 'action.staticbundle_page_create'|trans }}</button>
+        </p>
+    </form>
 
-<ul class="record_actions">
-    <li>
-        <a href="{{ path('page') }}">
-            {{ 'action.page_to_index'|trans }}
-        </a>
-    </li>
-</ul>
+    <ul class="record_actions_row">
+        <li>
+            <a href="{{ path('page') }}">
+                {{ 'action.staticbundle_page_to_index'|trans }}
+            </a>
+        </li>
+    </ul>
 {% endblock %}

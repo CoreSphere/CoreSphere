@@ -1,62 +1,58 @@
 {% extends 'CoreSphereStaticBundle:Page:layout.html.twig' %}
 
 {% block title %}
-{{ 'headline.page_index'|trans }}
+    {{ entity.title }}
 {% endblock %}
 
 {% block content %}
-<h2>{{ entity.title }}</h2>
+    <h1 class="main_headline">{{ entity.title }}</h1>
 
-<div class="record_show">
-		{{ entity.content }}
-</div>
+    <div class="rich_text spaced_box">
+    	{{ entity.content|raw }}
+    </div>
 
-<br />
+    <dl class="record_properties">
+        <dt>{{ 'attribute.staticbundle_page_id'|trans }}</dt>
+        <dd>{{ entity.id }}</dd>
 
-<table class="record_slug">
-    <tbody>
-        <tr>
-            <th>{{ 'attribute.staticbundle_static_slug'|trans }}</th>
-												<td><a href="{{ entity.slug }}" target="_blank">{{ entity.slug }}</a></td>
-								</tr>
-    </tbody>
-</table>
+        <dt>{{ 'attribute.staticbundle_page_createdAt'|trans }}</dt>
+        <dd>
+            <time datetime="{{ entity.createdAt|date('Y-m-d\TH:i:sP') }}">
+                {{ entity.createdat|date('Y-m-d H:i:s') }}
+            </time>
+        </dd>
 
-<br />
+        <dt>{{ 'attribute.staticbundle_page_publishedAt'|trans }}</dt>
+        <dd>
+            <time datetime="{{ entity.publishedAt|date('Y-m-d\TH:i:sP') }}">
+                {{ entity.publishedat|date('Y-m-d H:i:s') }}
+            </time>
+        </dd>
 
-<table class="record_properties">
-    <tbody>
-        <tr>
-												<th>{{ 'attribute.staticbundle_static_id'|trans }}</th>
-												<th>{{ 'attribute.staticbundle_static_createdAt'|trans }}</th>
-												<th>{{ 'attribute.staticbundle_static_publishedAt'|trans }}</th>
-												<th>{{ 'attribute.staticbundle_static_updatedAt'|trans }}</th>
-								</tr>
-        <tr>
-												<td>{{ entity.id }}</td>
-												<td>{{ entity.createdat|date('Y-m-d H:i:s') }}</td>
-												<td>{{ entity.publishedat|date('Y-m-d H:i:s') }}</td>
-												<td>{{ entity.updatedat|date('Y-m-d H:i:s') }}</td>
-								</tr>
-    </tbody>
-</table>
+        <dt>{{ 'attribute.staticbundle_page_updatedAt'|trans }}</dt>
+        <dd>
+            <time datetime="{{ entity.updatedAt|date('Y-m-d\TH:i:sP') }}">
+                {{ entity.updatedat|date('Y-m-d H:i:s') }}
+            </time>
+        </dd>
+    </dl>
 
-<ul class="record_actions">
-    <li>
-        <a href="{{ path('page') }}">
-            {{ 'action.page_to_index'|trans }}
-        </a>
-    </li>
-    <li>
-        <a href="{{ path('page_edit', { 'slug': entity.slug }) }}">
-            {{ 'action.page_edit'|trans }}
-        </a>
-    </li>
-    <li>
-        <form action="{{ path('page_delete', { 'slug': entity.slug }) }}" method="post">
-            {{ form_widget(delete_form) }}
-            <button type="submit">{{ 'action.page_delete'|trans }}</button>
-        </form>
-    </li>
-</ul>
+    <ul class="record_actions_row">
+        <li>
+            <a href="{{ path('page') }}">
+                {{ 'action.staticbundle_page_to_index'|trans }}
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('page_edit', { 'slug': entity.slug }) }}">
+                {{ 'action.staticbundle_page_edit'|trans }}
+            </a>
+        </li>
+        <li>
+            <form action="{{ path('page_delete', { 'slug': entity.slug }) }}" method="post">
+                {{ form_widget(delete_form) }}
+                <button type="submit" class="link_button">{{ 'action.staticbundle_page_delete'|trans }}</button>
+            </form>
+        </li>
+    </ul>
 {% endblock %}

@@ -18,6 +18,6 @@ class PageType extends AbstractType
     }
 	public function getName()
     {
-        return 'staticbundle_static';
+        return 'staticbundle_page';
     }
 }
