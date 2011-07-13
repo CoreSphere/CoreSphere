@@ -27,6 +27,10 @@ textarea {
 	min-height: 8em;
 }
 
+.dangerous:hover {
+  color: rgba(155,30,30,1);
+}
+
 .link_button {
   border: none;
   background: none;

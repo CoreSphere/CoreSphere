@@ -16,19 +16,15 @@
 
     <ul class="record_actions_row">
         <li>
-            <a href="{{ path('page') }}">
-                {{ 'action.staticbundle_page_to_index'|trans }}
-            </a>
+            <a href="{{ path('page') }}">{{ 'action.staticbundle_page_to_index'|trans }}</a>
         </li>
         <li>
-			<a href="{{ path('page_show', { 'slug': persisted_slug }) }}">
-			    {{ 'action.staticbundle_page_show'|trans }}
-			</a>
+			<a href="{{ path('page_show', { 'slug': persisted_slug }) }}">{{ 'action.staticbundle_page_show'|trans }}</a>
 		</li>
         <li>
             <form action="{{ path('page_delete', { 'slug': entity.slug }) }}" method="post">
                 {{ form_widget(delete_form) }}
-                <button type="submit" class="link_button" data-confirm="{{ 'action.staticbundle_page_confirm'|trans }}">
+                <button type="submit" class="dangerous link_button" data-confirm="{{ 'action.staticbundle_page_confirm'|trans }}">
                     {{ 'action.staticbundle_page_delete'|trans }}
                 </button>
             </form>
