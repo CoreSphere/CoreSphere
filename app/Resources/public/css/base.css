@@ -145,17 +145,3 @@ textarea {
 	margin: 2em 0;
 }
 
-.flash {
-  padding: 1em;
-  margin: 0 0 1em 0;
-}
-
-.success {
-  color: rgba(10,30,10,1);
-  background-color: rgba(220,255,220,1);
-}
-
-.error {
-  background-color: rgba(255,220,220,1);
-}
-
