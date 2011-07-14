@@ -16,4 +16,6 @@
 
         .delegate('[data-confirm]', 'click.coresphere', event_handler);
 
+    $('textarea').autoResize();
+
 }(window));
