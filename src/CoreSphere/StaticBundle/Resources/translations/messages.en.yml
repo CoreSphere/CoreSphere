@@ -1,0 +1,28 @@
+headline:
+    staticbundle_page_index: 'Static pages'
+    staticbundle_page_edit: 'Update static page'
+    staticbundle_page_new: 'Create static page'
+
+attribute:
+    staticbundle_page_id: 'Id'
+    staticbundle_page_title: 'Title'
+    staticbundle_page_content: 'Content'
+    staticbundle_page_createdAt: 'Created at'
+    staticbundle_page_publishedAt: 'Publish at'
+    staticbundle_page_updatedAt: 'Updated at'
+    staticbundle_page_slug: 'URL Identitfication Slug'
+
+action:
+    staticbundle_page_show: 'Show'
+    staticbundle_page_create: 'Create'
+    staticbundle_page_edit: 'Update'
+    staticbundle_page_delete: 'Delete'
+    staticbundle_page_new_page: 'Create a new page'
+    staticbundle_page_to_index: 'To list'
+    staticbundle_page_confirm: 'Are you sure?'
+
+message:
+    success:
+        staticbundle_page_create: 'Page was created successfully.'
+        staticbundle_page_update: 'Page was updated successfully.'
+        staticbundle_page_delete: 'Page was deleted successfully.'
