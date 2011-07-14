@@ -8,9 +8,9 @@ attribute:
     staticbundle_page_title: 'Titel'
     staticbundle_page_content: 'Inhalt'
     staticbundle_page_createdAt: 'Erstellt am'
-    staticbundle_page_publishedAt: 'Veröffentlicht am'
+    staticbundle_page_publishedAt: 'Veröffentlichung am'
     staticbundle_page_updatedAt: 'Aktualisiert am'
-    staticbundle_page_slug: 'URL Identitfigkations-Segment'
+    staticbundle_page_slug: 'URL Identitfikations-Segment'
 
 action:
     staticbundle_page_show: 'Anzeigen'
