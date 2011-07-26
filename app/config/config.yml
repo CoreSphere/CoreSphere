@@ -19,8 +19,6 @@ framework:
         lifetime:       3600
         auto_start:     true
 
-    exception_controller: CoreSphere\CoreBundle\Controller\ExceptionController::showAction
-
 # Twig Configuration
 twig:
     debug:            %kernel.debug%
@@ -28,6 +26,8 @@ twig:
     form:
         resources:
             - CoreSphereCoreBundle:Form:theme.html.twig
+
+    exception_controller: CoreSphere\CoreBundle\Controller\ExceptionController::showAction
 
 # Assetic Configuration
 assetic:
