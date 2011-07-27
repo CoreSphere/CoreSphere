@@ -2,7 +2,7 @@
 
 namespace CoreSphere\CoreBundle\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\ExceptionController as BaseController;
+use Symfony\Bundle\TwigBundle\Controller\ExceptionController as BaseController;
 use Symfony\Bundle\FrameworkBundle\Templating\TemplateReference;
 
 
